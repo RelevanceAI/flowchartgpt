@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import invariant from "tiny-invariant"
 
 import Controls from "@/components/Controls"
 import { Flowchart } from "@/components/Flowchart"
@@ -51,7 +50,7 @@ export default function App() {
   }
 
   return (
-    <main className="flex flex-1 flex-col md:flex-row divide-x divide-gray-100">
+    <main className="flex flex-1 flex-col divide-x divide-gray-100 md:flex-row">
       <div className="h-96 md:h-full md:w-[520px]">
         <Controls
           submit={async (prompt: string) => {

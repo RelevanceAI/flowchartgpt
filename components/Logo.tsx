@@ -1,10 +1,10 @@
 export function Logo() {
   return (
     <div className="flex items-center gap-4">
-      <div className="bg-yellow-400 p-1 h-8 rounded-md flex items-center justify-center">
+      <div className="flex h-8 items-center justify-center rounded-md bg-yellow-400 p-1">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="fill-yellow-900 h-full"
+          className="h-full fill-yellow-900"
           viewBox="0 0 256 256"
         >
           <path

@@ -4,12 +4,12 @@ import { Button } from "./ui/button"
 
 export function Header() {
   return (
-    <header className="px-6 py-2 border-b border-gray-200 flex items-center w-full justify-between">
+    <header className="flex w-full items-center justify-between border-b border-gray-200 px-6 py-2">
       <div className="flex items-center gap-3">
-        <div className="bg-yellow-400 p-1 h-6 rounded-md flex items-center justify-center">
+        <div className="flex h-6 items-center justify-center rounded-md bg-yellow-400 p-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="fill-yellow-900 h-full"
+            className="h-full fill-yellow-900"
             viewBox="0 0 256 256"
           >
             <path
@@ -24,10 +24,10 @@ export function Header() {
       </div>
 
       <div className="flex items-center">
-        <a href={siteConfig.links.github} target="_blank">
+        <a href={siteConfig.links.github} target="_blank" rel="noreferrer">
           <Button variant="link">GitHub</Button>
         </a>
-        <a href={siteConfig.links.relevance} target="_blank">
+        <a href={siteConfig.links.relevance} target="_blank" rel="noreferrer">
           <Button variant="link">Powered by Relevance Chains</Button>
         </a>
       </div>
