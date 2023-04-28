@@ -1,5 +1,3 @@
-import { TreeStructure } from "@phosphor-icons/react"
-
 export function Logo() {
   return (
     <div className="flex items-center gap-4">

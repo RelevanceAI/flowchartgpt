@@ -1,9 +1,5 @@
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import ReactFlow from "@/components/data/ReactFlow"
-
+import ReactFlow from "./chart/ReactFlow"
 import "reactflow/dist/style.css"
-import { Logo } from "@/components/Logo"
 
 const initialNodes = [
   {
@@ -44,19 +40,10 @@ const initialEdges = [
   { id: "e4-5", source: "4", target: "5", animated: true },
 ]
 
-export default function Home() {
+export function Flowchart() {
   return (
-    <section className="flex flex-col items-center justify-start p-16 min-h-screen gap-4 ">
-      <Logo />
-      <div className="max-w-screen-sm flex flex-col gap-4 w-full">
-        <h1 className="text-xl font-medium text-gray-900">FlowchartGPT</h1>
-        <p>Describe the process you want to create a flowchart for 💦</p>
-        <Input />
-        <Button>Draw</Button>
-        <div className="w-3/4 h-64">
-          <ReactFlow nodes={initialNodes} edges={initialEdges} />
-        </div>
-      </div>
-    </section>
+    <div className="flex flex-1 bg-slate-50/50">
+      <ReactFlow nodes={initialNodes} edges={initialEdges} />
+    </div>
   )
 }
