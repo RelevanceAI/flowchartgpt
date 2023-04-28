@@ -29,6 +29,7 @@ export default function App() {
     )
 
     if (!res.ok) {
+      setLoading(false)
       setError(true)
       throw new Error("Failed to generate flowchart")
     }
@@ -38,7 +39,12 @@ export default function App() {
     } = await res.json()
 
     const { initialNodes, initialEdges } = JSON.parse(answer)
-    invariant(initialNodes && initialEdges, "Failed to generate flowchart")
+
+    if (!initialNodes || !initialEdges) {
+      setLoading(false)
+      setError(true)
+      throw new Error("Failed to generate flowchart")
+    }
     setNodes(initialNodes)
     setEdges(initialEdges)
     setLoading(false)
@@ -46,12 +52,15 @@ export default function App() {
 
   return (
     <main className="flex flex-1 flex-col md:flex-row divide-x divide-gray-100">
-      <Controls
-        submit={async (prompt: string) => {
-          await generateFlowchart(prompt)
-        }}
-      />
-      <div className="flex flex-1 items-center justify-center bg-slate-50/50">
+      <div className="h-96 md:h-full md:w-[520px]">
+        <Controls
+          submit={async (prompt: string) => {
+            await generateFlowchart(prompt)
+          }}
+        />
+      </div>
+
+      <div className="flex flex-1 items-center justify-center bg-slate-50">
         {nodes && edges ? (
           <Flowchart nodes={nodes} edges={edges} />
         ) : error ? (

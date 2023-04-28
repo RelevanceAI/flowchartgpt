@@ -1,6 +1,10 @@
+import { siteConfig } from "@/config/site"
+
+import { Button } from "./ui/button"
+
 export function Header() {
   return (
-    <header className="px-6 py-4 border-b border-gray-200">
+    <header className="px-6 py-2 border-b border-gray-200 flex items-center w-full justify-between">
       <div className="flex items-center gap-3">
         <div className="bg-yellow-400 p-1 h-6 rounded-md flex items-center justify-center">
           <svg
@@ -17,6 +21,15 @@ export function Header() {
         </div>
 
         <span className="font-bold">FlowchartGPT</span>
+      </div>
+
+      <div className="flex items-center">
+        <a href={siteConfig.links.github} target="_blank">
+          <Button variant="link">GitHub</Button>
+        </a>
+        <a href={siteConfig.links.relevance} target="_blank">
+          <Button variant="link">Powered by Relevance Chains</Button>
+        </a>
       </div>
     </header>
   )

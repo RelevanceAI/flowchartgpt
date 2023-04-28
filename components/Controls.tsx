@@ -13,7 +13,7 @@ export default function Controls(props: ControlsProps) {
   const [prompt, setPrompt] = useState("")
 
   return (
-    <section className="flex flex-col p-6 text-gray-900 justify-between h-full">
+    <form className="flex flex-col p-6 text-gray-900 justify-between h-full">
       <div className="flex flex-col gap-4">
         <div className="flex flex-col gap-1">
           <h1 className="font-medium">Prompt</h1>
@@ -24,12 +24,22 @@ export default function Controls(props: ControlsProps) {
         </div>
 
         <Textarea
-          className="min-h-[300px]"
+          required
+          className="md:min-h-[300px]"
           onChange={(e) => setPrompt(e.target.value)}
         />
       </div>
 
-      <Button onClick={() => props.submit(prompt)}>Draw</Button>
-    </section>
+      <Button
+        onClick={(e) => {
+          e.preventDefault()
+          if (prompt) {
+            props.submit(prompt)
+          }
+        }}
+      >
+        Draw
+      </Button>
+    </form>
   )
 }
