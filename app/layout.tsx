@@ -29,22 +29,20 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <>
-      <html lang="en" suppressHydrationWarning>
-        <head />
-        <body
-          className={cn(
-            "min-h-screen bg-background font-sans antialiased",
-            fontSans.variable
-          )}
-          style={{ textRendering: "optimizeLegibility" }}
-        >
-          <div className="relative flex min-h-screen flex-col">
-            <Header />
-            <div className="flex flex-1">{children}</div>
-          </div>
-        </body>
-      </html>
-    </>
+    <html lang="en" suppressHydrationWarning>
+      <head />
+      <body
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          fontSans.variable
+        )}
+        style={{ textRendering: "optimizeLegibility" }}
+      >
+        <div className="relative flex min-h-screen flex-col">
+          <Header />
+          <div className="flex flex-1">{children}</div>
+        </div>
+      </body>
+    </html>
   )
 }
