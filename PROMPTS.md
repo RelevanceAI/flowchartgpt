@@ -58,5 +58,5 @@ Create a flowchart object using the react-flow object with nodes and edges in th
 { nodes: [value], edges: [value] }
 """
 
-Each node should include an "id", "data" with a "label", and "position" in the format: { "id": "[value]", "data": { "label": "[value]" }, "position": { "x": [value], "y": [value] } }. Consider any emphasis or animation requirements for edges connecting the stages. Return the output as a JSON string. Make sure the nodes are connected and spaced appropriately.
+Each node should include an "id", "data" with a "label", and "position" in the format: { "id": "[value]", "data": { "label": "[value]" }, "position": { "x": [value], "y": [value] } }. Consider any emphasis or animation requirements for edges connecting the stages. Return the output as a JSON string. Make sure the nodes are connected and spaced appropriately. Always arrange the nodes vertically.
 ```
