@@ -21,6 +21,7 @@ pnpm run dev # Access dev server at http://localhost:3000
 ```
 
 ---
+## How does this work?
 FlowchartGPT utilises a **chain** to generate the nodes and edges required to render a flowchart for the given prompt. More specifically, it chains several calls to `gpt-3.5-turbo` together. Using a chain helps GPT-3.5 understand the requirements for generating the flowchart and ensures the validity of the output. This achieves consistent and high-quality results in comparison with compressing instructions into a single prompt, which yielded inconsistent or poor results in testing.
 
 The steps in the chain are illustrated below.
@@ -29,6 +30,9 @@ The steps in the chain are illustrated below.
     <img src="https://user-images.githubusercontent.com/33971845/235194794-a9b9bbe9-aa8e-45ca-90d0-995623b57a19.png" width="600" />
 </div>
 
+## What prompts do you use? 
+Great question! You can find the prompts [here](https://github.com/RelevanceAI/flowchartgpt/blob/main/PROMPTS.md). 
+
 ## License
 
-Licensed under the [MIT license](https://github.com/shadcn/ui/blob/main/LICENSE.md).
+Licensed under the [MIT license]([https://github.com/shadcn/ui/blob/main/LICENSE.md](https://github.com/RelevanceAI/flowchartgpt/blob/main/LICENSE)).
