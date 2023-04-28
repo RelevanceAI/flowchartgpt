@@ -1,22 +1,16 @@
-# next-template
+<div align="center">
+    <h2>FlowchartGPT</h2>
+    <img src="https://user-images.githubusercontent.com/33971845/235101660-01ecc87f-5300-494b-8e29-c286effda998.png" width="600" />
+    <p>&nbsp;</p>
+    <p><i>Turn descriptions into flowcharts in seconds.</i></p>
+</div>
 
-A Next.js 13 template for building apps with Radix UI and Tailwind CSS.
-
-## Usage
-
-```bash
-npx create-next-app -e https://github.com/shadcn/next-template
+## Getting started
+Clone this repository, then:
 ```
-
-## Features
-
-- Radix UI Primitives
-- Tailwind CSS
-- Fonts with `next/font`
-- Icons from [Lucide](https://lucide.dev)
-- Dark mode with `next-themes`
-- Automatic import sorting with `@ianvs/prettier-plugin-sort-imports`
-- Tailwind CSS class sorting, merging and linting.
+pnpm install
+pnpm run dev // http://localhost:3000
+```
 
 ## License
 
