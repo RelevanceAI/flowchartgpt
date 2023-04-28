@@ -86,7 +86,7 @@ export default function App() {
             </svg>
 
             <span className="text-yellow-700">
-              Loading — this might take a while...
+              Generating — this might take a while...
             </span>
           </div>
         ) : null}
